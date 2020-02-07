@@ -1,15 +1,10 @@
 body{
-	background-color: #dddddd;
+	background-color: blue;
 }
 
 .main_div{
-	width: 50%;
-	background-color: transparent;
-	border-radius: 40px;
-	border:1px dotted black;
+	width=50%;
 }
-
-#img1{
-	width: 50%;
-	padding: 20px;
+#food-image{
+	width=40%;
 }

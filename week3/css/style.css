@@ -1,0 +1,98 @@
+body{
+	background-color:rgb(153, 204, 255);
+}
+
+#package{
+	width: 450px;
+	height: 720px;
+	background-color: rgb(255, 238, 0);
+	position: relative;
+
+}
+
+#name{
+	margin: 0;
+	position: absolute;
+	top: 0%;
+	font-size: 110px;
+	color:yellow;
+	font-weight: bold;
+    font-family: 'Merienda One', cursive;
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: black;
+	letter-spacing: -3px;
+	text-shadow: 3px 3px rgb(77, 77, 77);
+	text-align: center;
+	background-color: rgb(230, 115, 0);
+	height: 240px;
+	width: 450px;
+}
+
+#name2{
+	object-position: center;
+	position: relative;
+	top: 34%;
+	font-family: sans-serif;
+	font-weight: bold;
+	letter-spacing: 4px;
+	font-size: 50px;
+	color: yellow;
+	font-style: italic;
+	font-weight: bold;
+	text-shadow: 3px 3px black;
+	font-family: 'Covered By Your Grace', cursive;
+	-webkit-text-stroke-width: .5px;
+	-webkit-text-stroke-color: red;
+	background-color: red;
+	height: 140px;
+	width: 440px;
+	border: 5px solid rgb(230, 115, 0);
+}
+
+#name1{
+	margin: 0;
+	position: relative;
+	top: 17%;
+	font-size: 33px;
+	color:red;
+	font-weight: bold;
+	font-family: 'Baloo Bhaina', cursive;
+	text-shadow: 3px 3px rgb(77, 77, 77);
+	-webkit-text-stroke-width: .5px;
+	-webkit-text-stroke-color: yellow;
+	letter-spacing: -1px;
+}
+
+#name3{
+	margin: 0;
+	position: relative;
+	top: -5%;
+	left: 67%;
+	font-size: 14px;
+	color:black;
+	font-weight: bold;
+	-webkit-text-stroke-width: .2px;
+	-webkit-text-stroke-color: yellow;
+	letter-spacing: 1px;
+	width: 150px;
+}
+
+#name4{
+	margin: 0;
+	position: relative;
+	top: 60%;
+	left: 3%;
+	font-family: 'Oswald', sans-serif;
+	font-size: 20px;
+	color: black;
+	font-weight: bold;
+	Letter-spacing: 1px;
+}
+
+#original_img_container{
+	width: 720px;
+}
+
+#original_img{
+	width: 100%;
+}

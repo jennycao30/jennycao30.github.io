@@ -6,8 +6,25 @@ body{
 	width: 450px;
 	height: 720px;
 	background-color: rgb(255, 238, 0);
-	position: relative;
+	position: fixed;
+	z-index: 2
+}
 
+#contents{
+	width: 450px;
+	height: 720px;
+	position: fixed;
+	top:320px;
+	z-index: 1;
+}
+
+#cheetos{
+	width: 450px;
+	height: 300px;
+}
+
+#package:hover{
+	display: none;
 }
 
 #name{
@@ -91,8 +108,18 @@ body{
 
 #original_img_container{
 	width: 720px;
+	left: 475px;
+	position: absolute;
 }
 
 #original_img{
 	width: 100%;
+
+}
+
+.anchor{
+	width:100%;
+	left: 450px;
+	top: 750px;
+	position: absolute;
 }

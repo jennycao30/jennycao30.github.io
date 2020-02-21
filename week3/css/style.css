@@ -107,7 +107,7 @@ body{
 }
 
 #original_img_container{
-	width: 720px;
+	width: 450px;
 	left: 475px;
 	position: absolute;
 }
@@ -119,7 +119,7 @@ body{
 
 .anchor{
 	width:100%;
-	left: 450px;
-	top: 750px;
+	left: 630px;
+	top: 500px;
 	position: absolute;
 }

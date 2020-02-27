@@ -1,0 +1,35 @@
+body {
+  background-image: url("../media/BG4_3.png");
+  background-size: cover;
+}
+
+.about{
+	position: relative;
+	font-family: 'Grand Hotel', sans-serif ;
+	font-size: 60px;
+	color: transparent;
+	-webkit-text-stroke-width: .3px;
+	-webkit-text-stroke-color: rgb(255, 204, 204);
+	text-align: center;
+}
+
+.anchor{
+	font-size: 18px;
+	font-family: 'Dosis', sans-serif;
+	color: white;
+	text-align: center;
+}
+
+.statement{
+	font-size: 30px;
+	font-family: 'Dosis', sans-serif;
+	color: white;
+	text-align: center;
+}
+
+.anchor{
+	font-size: 18px;
+	font-family: 'Dosis', sans-serif;
+	color: white;
+	text-align: center;
+}

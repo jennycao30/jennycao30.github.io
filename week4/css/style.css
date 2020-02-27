@@ -1,0 +1,57 @@
+body {
+  background-image: url("../media/BG4.jpg");
+  background-size: cover;
+}
+
+.title{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Grand Hotel', sans-serif ;
+	font-size: 100px;
+	transition: -webkit-text-stroke-color 2s, color 2s;
+}
+
+.title:hover{
+	color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: rgb(255, 204, 204);
+}
+
+.menu{
+	margin:24px;
+	width:200px;
+	background-color: hsl(0, 100%, 90%, 50%);
+    border-color: white;
+    border-style: double;
+    text-align: center;
+}
+
+.menu_list{
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	font-family: 'Dosis', sans-serif;
+  	font-size: 55px;
+}
+
+.work_list{
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	font-family: 'Dosis', sans-serif;
+  	font-size: 24px;
+}
+
+#menu_home:hover{
+	color:skyblue;
+}
+
+#menu_about:hover{
+	color:skyblue;
+}
+
+#menu_works:hover{
+	color:skyblue;
+}

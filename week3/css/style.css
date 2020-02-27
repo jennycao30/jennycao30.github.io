@@ -1,5 +1,16 @@
-body{
-	background-color:rgb(153, 204, 255);
+body {
+  background-image: url("../media/BG4.jpg");
+  background-size: cover;
+}
+
+.Title{
+	position: relative;
+	font-family: 'Grand Hotel', sans-serif ;
+	font-size: 60px;
+	color: transparent;
+	-webkit-text-stroke-width: .3px;
+	-webkit-text-stroke-color: rgb(255, 204, 204);
+	text-align: center;
 }
 
 #package{
@@ -119,7 +130,8 @@ body{
 
 .anchor{
 	width:100%;
-	left: 630px;
-	top: 500px;
+	left: 645px;
+	top: 675px;
 	position: absolute;
+	font-family: 'Dosis', sans-serif;
 }

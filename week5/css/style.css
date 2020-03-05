@@ -67,6 +67,15 @@ body {
 	left: 35%;
 }
 
+.husky{
+	display: none;
+	width: 10%;
+	height: 30%;
+	position: fixed;
+	top:20%;
+	left: 35%;
+}
+
 .Thirst{
 	width: 17%;
 	height: 39%;
@@ -84,10 +93,8 @@ body {
 
 .huskies{
 	position: fixed;
-	height: 100%;
 	margin: 0;
 	top: 20%;
-	top:20%;
 	height: 27%;
 	left: 30%;
 }
@@ -116,15 +123,20 @@ body {
 	z-index: 2;
 }
 
-@media only screen and (min-width: 1000px) {
+@media only screen and (min-width: 600px) {
   .hidden1 {
     display: inherit;
   }
 }
+
 @media only screen and (min-width: 700px) {
   .hidden2 {
     display: inherit;
   }
+
+  .husky{
+		display: inherit;
+	}
 }
 
 @media only screen and (max-width: 720px) {

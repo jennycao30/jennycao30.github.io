@@ -135,3 +135,23 @@ body {
 	position: absolute;
 	font-family: 'Dosis', sans-serif;
 }
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: rgb(255, 204, 204);
+}
+
+/* mouse over link */
+a:hover {
+  color: purple;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}

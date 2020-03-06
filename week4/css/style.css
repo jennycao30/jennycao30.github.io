@@ -108,32 +108,30 @@ body {
 	max-height: 20em;
 }
 
-@media only screen and (min-width: 360px) and (max-width: 767px){
+@media only screen and (max-width: 767px) {
+	.container{
+		background-size: contain;
+	}
+
+	.title{
+		font-size: 50px;
+		text-align: center;
+	}
+
 	.side{
 		width:50%;
 		height: 50%;
 		position: fixed;
-		left: 50%;
-		margin-left: -100px;
+		left: 20%;
 		font-size: 10px;
 	}
 
-	.smenu a{
-		font-size: 8px;
-	}
-
-}
-
-@media only screen and (min-width: 740px) and (orientation: landscape) {
-	.side{
-		width: 25%;
-		height: 25%;
-		position: fixed;
-		font-size: 10px;
+	.menu{
+		position: relative;
+		left: 15%;
 	}
 
 	.smenu a{
 		font-size: 8px;
 	}
 }
-

@@ -1,0 +1,51 @@
+@media only screen and (min-width: 360px) and (max-width: 767px)
+	and (device-width: 360px)
+	and (device-height: 740px)
+	and (-webkit-device-pixel-ration:2) {
+	.container{
+		background-size: contain;
+	}
+
+	.title{
+		font-size: 12px;
+		text-align: center;
+	}
+
+	.side{
+		width:50%;
+		height: 50%;
+		position: fixed;
+		left: 50%;
+		top: 75%;
+		margin-top: -50px;
+		margin-left: -100px;
+		font-size: 10px;
+	}
+
+	.menu{
+		position: fixed;
+		left: 50%;
+		top: 50%;
+	}
+
+	.smenu a{
+		font-size: 8px;
+	}
+}
+
+
+
+/*new code*/
+@media only screen and (min-width: 740px) and (orientation: landscape) {
+	.side{
+		width: 25%;
+		height: 25%;
+		top: 25%;
+		position: fixed;
+		font-size: 10px;
+	}
+
+	.smenu a{
+		font-size: 8px;
+	}
+}

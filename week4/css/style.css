@@ -10,6 +10,7 @@ body {
 	transform: translate(-50%, -50%);
 	font-family: 'Grand Hotel', sans-serif ;
 	font-size: 100px;
+	text-align: center;
 	transition: -webkit-text-stroke-color 2s, color 2s;
 }
 

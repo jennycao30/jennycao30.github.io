@@ -13,12 +13,14 @@ body {
 	font-size: 100px;
 	text-align: center;
 	transition: -webkit-text-stroke-color 2s, color 2s;
+	z-index: 1;
 }
 
 .title:hover{
 	color: transparent;
 	-webkit-text-stroke-width: 1px;
 	-webkit-text-stroke-color: rgb(255, 204, 204);
+	z-index: 1;
 }
 
 *{
@@ -116,7 +118,7 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 1;
+	z-index: 2;
 	animation-name: background_animation;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
@@ -125,7 +127,7 @@ body {
 
 @keyframes background_animation{
 	0% { opacity: 1; }
-	99% { opacity: 0; z-index: 1; }
+	99% { opacity: 0; z-index: 2; }
 	100% { opacity: 0; z-index: 0; }
 }
 

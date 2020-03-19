@@ -1,6 +1,7 @@
 body {
   background-image: url("../media/BG4.jpg");
   background-size: cover;
+  overflow: hidden;
 }
 
 .title{
@@ -31,7 +32,7 @@ body {
 .side{
 	width: 40%;
 	position: absolute; 
-	top: 30%;
+	top: 35%;
 	left: 23%;
 	transform: translate(-50%, -50%);
 }
@@ -108,6 +109,52 @@ body {
 	max-height: 20em;
 }
 
+.landing_animation_container{
+	width: 100%;
+	height: 100%;
+	background: black;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	animation-name: background_animation;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 4s;
+}
+
+@keyframes background_animation{
+	0% { opacity: 1; }
+	99% { opacity: 0; z-index: 1; }
+	100% { opacity: 0; z-index: 0; }
+}
+
+.progress_bar{
+	width:14%;
+	height: 13px;
+	border-style: ridge;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.progress{
+	width:0%;
+	height: 100%;
+	background-color: rgb(255, 204, 204);
+	animation-name: progress_animation;
+	animation-duration: 4s;
+	animation-fill-mode:forwards;
+}
+
+@keyframes progress_animation {
+	0%   { width: 0%;}
+	100%  { width: 100%;}
+	from {background-color: rgb(204, 204, 255);}
+    to {background-color: rgb(153, 204, 255);}
+}
+
 @media only screen and (max-width: 767px) {
 	.container{
 		background-size: contain;
@@ -135,3 +182,5 @@ body {
 		font-size: 8px;
 	}
 }
+
+

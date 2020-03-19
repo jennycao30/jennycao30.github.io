@@ -29,6 +29,7 @@ body {
 	font-family: 'Dosis', sans-serif;
 	list-style: none;
 	text-decoration: none;
+	z-index: 2;
 }
 
 .side{
@@ -37,17 +38,20 @@ body {
 	top: 35%;
 	left: 23%;
 	transform: translate(-50%, -50%);
+	z-index: 2;
 }
 
 .menu{
 	width: 50%;
 	border-radius: 8px;
 	overflow: hidden;
+	z-index: 2;
 }
 
 .items{
 	border-top: 1px solid #2980b9;
 	overflow: hidden;
+	z-index: 2;
 }
 
 .btn{
@@ -56,6 +60,7 @@ body {
 	background: #3498db;
 	color: white;
 	position: relative;
+	z-index: 2;
 }
 
 .btn:before{
@@ -67,11 +72,13 @@ body {
 	left: 20px;
 	bottom: -7px;
 	transform: rotate(45deg);
+	z-index: 2;
 
 }
 
 .btn i{
 	margin-right: 10px;
+	z-index: 2;
 
 }
 
@@ -80,6 +87,7 @@ body {
 	overflow: hidden;
 	transition: max-height 0.3s;
 	max-height: 0;
+	z-index: 2;
 }
 
 .smenu a{
@@ -89,6 +97,7 @@ body {
 	font-size: 14px;
 	margin: 4px 0;
 	position: relative;
+	z-index: 2;
 }
 
 .smenu a:before{
@@ -101,14 +110,17 @@ body {
 	top: 0;
 	transition: 0.3s;
 	opacity: 0;
+	z-index: 2;
 }
 
 .smenu a:hover:before{
 	opacity: 1;
+	z-index: 2;
 }
 
 .items:target .smenu{
 	max-height: 20em;
+	z-index: 2;
 }
 
 .landing_animation_container{
@@ -118,7 +130,7 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index: 2;
+	z-index: 3;
 	animation-name: background_animation;
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
@@ -127,7 +139,7 @@ body {
 
 @keyframes background_animation{
 	0% { opacity: 1; }
-	99% { opacity: 0; z-index: 2; }
+	99% { opacity: 0; z-index: 3; }
 	100% { opacity: 0; z-index: 0; }
 }
 

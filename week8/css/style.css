@@ -1,0 +1,50 @@
+body {
+  background-image: url("../media/BG4.jpg");
+  background-size: cover;
+  font-family: 'Dosis', sans-serif;
+  color: rgb(255, 204, 204);
+}
+
+.Title{
+	position: relative;
+	font-family: 'Grand Hotel', sans-serif ;
+	font-size: 60px;
+	color: transparent;
+	-webkit-text-stroke-width: .3px;
+	-webkit-text-stroke-color: rgb(255, 204, 204);
+	text-align: center;
+}
+
+#poem{
+	width: 40%;
+	height:100%;
+	position: relative;
+	top: 50%;
+	left: 29%;
+	padding: 8px 10px;
+	margin: 0;
+	border: solid white 1px;
+	background-color: hsla(100, 100%, 100%, 0.1);
+	text-align: center;
+
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: rgb(255, 204, 204);
+}
+
+/* mouse over link */
+a:hover {
+  color: purple;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}

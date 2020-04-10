@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jenny's website</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+	<link href="https://fonts.googleapis.com/css?family=Dosis|Grand+Hotel|Indie+Flower&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="../favicon/favicon.png" />
+</head>
+
+<body>
+	<h1 class="Title">Fire and Ice</h1>
+	<div id="poem">
+		<p>
+			Some say the world will end in fire, <br>
+			Some say in ice. <br>
+			From what I've tasted of desire <br>
+			I hold with those who favor <span id="Fire">fire</span>.<br>
+			But if it had to perish twice, <br>
+			I think I know enough of hate <br>
+			To know that for destruction ice <br>
+			Is also great <br> 
+			And would suffice.
+		</p>
+	</div>
+	<br>
+
+
+	<center><button class="shuffle" onclick="myFunction()"> 
+	Shuffle! 
+	</button></center>
+
+	<script>
+		function myFunction(){
+			var randomNumber = Math.random();
+			var chosenWord = "";
+			var bgColor = "";
+
+			if (randomNumber > 0.5){
+				chosenWord = "fire";
+				bgColor = "rgb(204, 0, 0, 0.5)";
+			}else{
+				chosenWord = "ice";
+				bgColor="rgb(102, 153, 255, 0.5)";
+			}
+
+			var Fire = document.getElementById("Fire");
+			var poem = document.getElementById("poem");
+
+			Fire.innerHTML = chosenWord;
+			poem.style.backgroundColor = bgColor;
+
+		}
+	</script>
+
+	<br>
+	
+	<center><a href="../index.html">Home Page</a>
+</body>
+
+</html>

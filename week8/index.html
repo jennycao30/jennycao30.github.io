@@ -16,7 +16,7 @@
 			From what I've tasted of desire <br>
 			I hold with those who favor <span id="Fire">fire</span>.<br>
 			But if it had to perish twice, <br>
-			I think I know enough of hate <br>
+			I think I know enough of <span id="Hate">hate</span> <br>
 			To know that for destruction ice <br>
 			Is also great <br> 
 			And would suffice.
@@ -33,23 +33,41 @@
 		function myFunction(){
 			var randomNumber = Math.random();
 			var chosenWord = "";
+			var chosen_Word= "";
 			var bgColor = "";
+			var ftColor = "";
 
 			if (randomNumber > 0.5){
 				chosenWord = "fire";
 				bgColor = "rgb(204, 0, 0, 0.5)";
+				ftColor = "rgb(255, 204, 153)"
 			}else{
 				chosenWord = "ice";
-				bgColor="rgb(102, 153, 255, 0.5)";
+				bgColor = "rgb(102, 153, 255, 0.5)";
+				ftColor = "rgb(255, 255, 255)"
 			}
 
+			if (randomNumber < 0.5){
+				chosen_Word = "hate";
+				bgColor = "rgb(102, 153, 255, 0.5)";
+			}else{
+				chosen_Word = "love";
+				bgColor = "rgb(204, 0, 0, 0.5)";
+			}
+			
 			var Fire = document.getElementById("Fire");
 			var poem = document.getElementById("poem");
+			var Hate = document.getElementById("Hate");
 
 			Fire.innerHTML = chosenWord;
 			poem.style.backgroundColor = bgColor;
+			poem.style.color = ftColor;
+
+			Hate.innerHTML = chosen_Word;
+			poem.style.backgroundColor = bgColor;
 
 		}
+
 	</script>
 
 	<br>

@@ -29,6 +29,12 @@ body {
 
 }
 
+#Hate{
+	color: black;
+	font-weight: bold;
+}
+
+
 /* unvisited link */
 a:link {
   color: red;

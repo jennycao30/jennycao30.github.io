@@ -35,7 +35,7 @@ body {
 .side{
 	width: 40%;
 	position: absolute; 
-	top: 35%;
+	top: 40%;
 	left: 23%;
 	transform: translate(-50%, -50%);
 	z-index: 2;
@@ -119,7 +119,7 @@ body {
 }
 
 .items:target .smenu{
-	max-height: 20em;
+	max-height: 30em;
 	z-index: 2;
 }
 

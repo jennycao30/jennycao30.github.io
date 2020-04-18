@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jenny's website</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis|Grand+Hotel|Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="../favicon/favicon.png" />
+<style>
+body {
+  background-image: url("media/BG4.jpg");
+  background-size: cover;
+}
+
+.slideshow-container {
+  width: 60%;
+  position: relative;
+  background: #f1f1f1f1;
+  margin:0px auto;
+}
+
+.mySlides {
+  display: none;
+  height: 400px;
+  text-align: center;
+}
+
+.anchor{
+  position: relative;
+  opacity:0;
+}
+
+#slide1{
+  background-image: url('media/Project1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#slide2{
+  background-image: url('media/Project2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+#slide3{
+  background-image:url('media/Project3.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.layer_contents{
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -30px;
+  padding: 16px;
+  color: #888;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  position: absolute;
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: white;
+}
+
+/* The dot/bullet/indicator container */
+.dot-container {
+    text-align: center;
+    margin:0px auto;
+    padding: 20px 0 20px 0;
+    background: black;
+    width: 60%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Add a background color to the active dot/circle */
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+</style>
+</head>
+
+<body>
+
+  <br>
+
+<div >
+<div class="slideshow-container">
+
+<div id="slide1" class="mySlides">
+  <div class="layer">
+    <div class="layer_contents">
+      <a class="anchor" href="https://vimeo.com/322837946" target="_blank">
+        <img src="media/Project1.png" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="slide2" class="mySlides">
+  <div class="layer">
+    <div class="layer_contents">
+      <a class="anchor" href="https://vimeo.com/335909271" target="_blank">
+        <img src="media/Project2.png" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<div id="slide3" class="mySlides">
+  <div class="layer">
+    <div class="layer_contents">
+      <a class="anchor" href="https://soundcloud.com/user-971494187/jenny-cao-audio-portrait" target="_blank">
+        <img src="media/Project3.png" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<a class="prev" onclick="setIndexFromSideButton(-1)">❮</a>
+<a class="next" onclick="setIndexFromSideButton(1)">❯</a>
+
+</div>
+
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function setIndexFromSideButton(n){
+  slideIndex = slideIndex + n;
+  showSlides();
+}
+
+function currentSlide(n) {
+  slideIndex = n;
+  showSlides();
+}
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  if (slideIndex < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<br>
+
+<center>
+  <a class="home" href="../index.html">Home Page</a>
+</center>
+
+</body>
+</html> 

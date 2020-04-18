@@ -1,0 +1,31 @@
+body {
+  background-image: url("media/BG4.jpg");
+  background-size: cover;
+}
+
+.home{
+  font-family: 'Dosis', sans-serif;
+  z-index:3;
+  position: absolute;
+  left: 47.75%;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: rgb(255, 204, 204);
+}
+
+/* mouse over link */
+a:hover {
+  color: purple;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}

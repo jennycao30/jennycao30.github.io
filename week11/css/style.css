@@ -1,0 +1,135 @@
+body{
+	background-image: url(../media/BG4.jpg);
+}
+#space1 {
+	position: relative;
+}
+		
+#space2 {
+	position: relative;
+}
+		
+#space3 {
+	position: relative;
+}
+		
+@keyframes updown {
+	0% {
+		top: 50%;
+	}
+
+	50% {
+		top: 52%;
+	}
+
+	100% {
+		top: 50%;
+	}
+}
+		
+#svg_container1{
+	cursor: pointer;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: updown 1s ease infinite;
+}
+
+#svg_container2{
+	cursor: pointer;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding:5px;
+}
+		
+#svg_container3{
+	cursor: pointer;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	animation: updown 1s ease infinite;
+}
+
+
+#food{
+	fill: #ffe6e6;
+	stroke: #f40c0c;
+	stroke-width: 2px;
+	stroke-dasharray: 5000px;
+	stroke-dashoffset: 5000px;
+	z-index: 1;
+}
+
+#FLP{
+	fill: #bbd3f9;
+	stroke: #bbd3f9;
+	stroke-width: 1px;
+	stroke-dasharray: 1853px;
+	stroke-dashoffset: 1853px;
+}
+
+#code{
+	fill: #f1baba;
+	stroke: #f1baba;
+	stroke-width: 1px;
+	stroke-dasharray: 1853px;
+	stroke-dashoffset: 1853px;
+}
+
+#FLCPIC{
+	position: absolute;
+	margin: 0;
+	width: 170%;
+	height: 125%;
+	top: -16%;
+	left: -35%;
+	opacity: 0.5;
+	z-index: 0;
+}
+
+.svg_drawing_animation{
+			
+	animation: move 8s linear forwards;  
+	animation-delay: 1s;
+		}
+
+@keyframes move {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+.home{
+	position: relative;
+	top: 13%;
+	text-align: center;
+	font-family: 'Dosis', sans-serif;
+	z-index: 2;
+}
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: rgb(255, 204, 204);
+}
+
+/* mouse over link */
+a:hover {
+  color: purple;
+}
+
+/* selected link */
+a:active {
+  color: blue;
+}

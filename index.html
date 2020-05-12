@@ -3,76 +3,133 @@
 
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Jenny's website</title>
-		<link rel="stylesheet" type="text/css" href="week4/css/style.css"/> 
-		<link href="https://fonts.googleapis.com/css?family=Dosis|Grand+Hotel|Indie+Flower&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="Personal_Portfolio/css/style02.css"/> 
+		<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&family=Work+Sans:wght@300;600&display=swap" rel="stylesheet">
 		<link rel="shortcut icon" href="favicon/favicon.png" />
     	<script src="https://kit.fontawesome.com/8a1dce2613.js" crossorigin="anonymous"></script>
+
+
 	</head>
 	
 	<body>
-		<div class="container">
-			<div class="title">
-				Jenny Cao
-			</div>
-		</div>
+		<header>
+			<h1 class="logo">Jenny Cao</h1>
+			 <input type="checkbox" id="nav-toggle" class="nav-toggle">
+			<nav>
+				<ul class="right">
+					<li><a href="#home">Home</a></li>
+					<li><a href="about/index.html">About</a></li>
+					<li><a href="#">Works</a></li>
+					<li><a href="#">Contact</a></li>
+					<li><a href="https://www.facebook.com/jenny.cao.33"><i class="fab fa-facebook-square"></i></a></li>
+					<li><a href="https://www.instagram.com/moo_jenn/"><i class="fab fa-instagram"></i></a></li>
+				</ul>
+			</nav>
 
-		<div class="side">
-			<div class="menu">
-				
-				<li class="items" id='home'>
-					<a href="#home" class="btn"><i class="fas fa-home"></i>Home</a>
-				</li>
+			<label for="nav-toggle" class="nav-toggle-label">
+				<span></span>
+			</label>
+		</header>
 
+		<br>
 
-				<li class="items" id='about'>
-					<a href="about/index.html" class="btn"><i class="fas fa-user"></i>About</a>
-				</li>
+<div class="slides">
+<div class="slideshow-container">
 
-				<li class="items" id='social_media'>
-					<a href="#social_media" class="btn"><i class="fas fa-hashtag"></i>Social Media</a>
+<div id="slide1" class="mySlides fade">
+  <div class="layer">
+    <div class="layer_contents">
+      <a class="anchor" href="index02.html" target="_blank">
+        <img src="Personal_Portfolio/media/medp285.png" />
+      </a>
+    </div>
+  </div>
+</div>
 
-					<div class="smenu" id="sm" data-collapse="accordion">
-						<a href="https://www.instagram.com/moo_jenn/">Instagram</a>
+<div id="slide2" class="mySlides fade">
+  <div class="layer">
+    <div class="layer_contents">
+      <a class="anchor" href="https://moomoojenn.blogspot.com/" target="_blank">
+        <img src="Personal_Portfolio/media/medp150.png" />
+      </a>
+    </div>
+  </div>
+</div>
 
-						<a href="https://www.facebook.com/jenny.cao.33">Facebook</a>
-					</div>
-				</li>
+<div id="slide3" class="mySlides fade">
+  <div class="layer">
+    <div class="layer_contents">
+      <a class="anchor" href="https://vimeo.com/322837946" target="_blank">
+        <img src="Personal_Portfolio/media/Project1.png" />
+      </a>
+    </div>
+  </div>
+</div>
 
+<div id="slide4" class="mySlides fade">
+  <div class="layer">
+    <div class="layer_contents">
+      <a class="anchor" href="https://vimeo.com/335909271" target="_blank">
+        <img src="Personal_Portfolio/media/Project2.png" />
+      </a>
+    </div>
+  </div>
+</div>
 
-				<li class="items" id='works'>
-					<a href="#works" class="btn"><i class="fas fa-pencil-ruler"></i>Works</a>
+<div id="slide5" class="mySlides fade">
+  <div class="layer">
+    <div class="layer_contents">
+      <a class="anchor" href="https://soundcloud.com/user-971494187/jenny-cao-audio-portrait" target="_blank">
+        <img src="Personal_Portfolio/media/Project3.png" />
+      </a>
+    </div>
+  </div>
+</div>
 
-					<div class="smenu" id="proj" data-collapse="accordion">
-						<a href="ForLoopCode/ForLoopCode.html">For Loop Code</a>
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-						<a href="week11/index.html">Scrolling For Loop Code</a>
+</div>
 
-						<a href="week2/index.html">Video</a>
+<div class="dot-container">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+</div>
+</div>
 
-						<a href="week3/index.html">Snack Packaging</a>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
 
-						<a href="week5/index.html">Responsive</a>
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-						<a href="week6/index.html">Landing Animation</a>
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-						<a href="week8/index.html">Randomized Poem</a>
-
-						<a href="week9/index.html">MEDP160 Projects</a>
-
-					</div>
-				</li>
-			</div>
-		</div>
-
-
-		<div class="landing_animation_container">
-			<div class="progress_bar">
-				<div class="progress">
-				</div>
-			</div>
-		</div>
-
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
 
 	</body>
 </html>

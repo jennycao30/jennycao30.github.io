@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&family=Grand+Hotel&family=Work+Sans:wght@300;600&display=swap');
 
 :root {
-  --background: transparent;
+  --background: rgb(0, 0, 0, .7);
 }
 
 *, *::before, *::after {
@@ -120,7 +120,7 @@ nav a {
 }
 
 nav a:hover {
-  color: rgb(204, 229, 255);
+  color: rgb(230, 242, 255);
 }
 
 .nav-toggle:checked ~ nav {
@@ -168,7 +168,7 @@ nav a:hover {
 }
 
 #slide2{
-  background-image: url('../media/medp150.png');
+  background-image: url('../media/medp160.png');
   background-size: cover;
   background-position: center;
 }

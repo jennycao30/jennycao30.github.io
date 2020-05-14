@@ -1,0 +1,449 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&family=Grand+Hotel&family=Work+Sans:wght@300;600&display=swap');
+*{
+	box-sizing: border-box;
+}
+
+.Section1{
+	color: rgb(204, 229, 255);
+	font-family: 'Work Sans', sans-serif;
+	position: relative;
+	text-align: center;
+	top: 75%;
+}
+
+.column{
+	float: left;
+	width: 25%;
+	padding: 5px;
+	position:absolute;
+	top: 20%;
+}
+
+.column2{
+	float: left;
+	width: 25%;
+	padding: 5px;
+	position:absolute;
+	top: 80%;
+}
+
+.column3{
+	float: left;
+	width: 25%;
+	padding: 5px;
+	position:absolute;
+	top: 140%;
+}
+
+.column4{
+	float: left;
+	width: 25%;
+	padding: 5px;
+	position:absolute;
+	top: 200%;
+}
+
+.column5{
+	float: left;
+	width: 25%;
+	padding: 5px;
+	position:absolute;
+	top: 285%;
+}
+
+.column6{
+	float: left;
+	width: 25%;
+	padding: 5px;
+	position:absolute;
+	top: 345%;
+}
+
+.column7{
+	float: left;
+	width: 25%;
+	padding: 5px;
+	position:absolute;
+	top: 405%;
+}
+
+.column8{
+	float: left;
+	width: 25%;
+	padding: 5px;
+	position:absolute;
+	top: 465%;
+}
+
+.column9{
+	float: left;
+	width: 25%;
+	padding: 5px;
+	position:absolute;
+	top: 525%;
+}
+
+.column10{
+	float: left;
+	width: 25%;
+	padding: 5px;
+	position:absolute;
+	top: 585%;
+}
+
+.column11{
+	float: left;
+	width: 25%;
+	padding: 5px;
+	position:absolute;
+	top: 645%;
+}
+
+
+/*Clearfix (clear floats)*/
+.row::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.row2::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.row3::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.row4::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.row5::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.row6::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.row7::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.row8::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.row8::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.row10::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.row11::after{
+	content: "";
+	clear: both;
+	display: table;
+}
+
+
+/*Row 1*/
+#bkfast{
+	position: absolute;
+	left: -181%;
+}
+
+#vegecongee{
+	position: absolute;
+	left: -49%; 
+}
+
+#bfcongee{
+	position: absolute;
+    left: 84%;
+}
+
+
+/*Row 2*/
+#bap{
+	position: absolute;
+	left: -181%;
+}
+
+#dumps{
+	position: relative;
+	left: -51%;
+	vertical-align: center;
+}
+
+#alcohol{
+	position:absolute;
+	left: 84%;
+}
+
+
+/*Row 3*/
+#cheese{
+	position: absolute;
+	left: -181%;
+}
+
+#Drinks{
+	position: absolute;
+	left: -49%; 
+}
+
+#chicken{
+	position: absolute;
+    left: 84%;
+}
+
+
+/*Row 4*/
+#alley{
+	position: absolute;
+	left: -181%;
+}
+
+#skewer{
+	position: absolute;
+	left: -49%; 
+}
+
+#bbt{
+	position: absolute;
+    left: 84%;
+    top: 30%;
+}
+
+
+/*Row 5*/
+#Dessert{
+	position: absolute;
+	left: -181%;
+}
+
+#Poopdessert{
+	position: absolute;
+	left: -49%; 
+}
+
+#kfcdessert{
+	position: absolute;
+    left: 84%;
+}
+
+/*Row 6*/
+#KFC{
+	position: absolute;
+	left: -181%;
+}
+
+#SteakShrimp{
+	position: absolute;
+	left: -49%; 
+}
+
+#egg{
+	position: absolute;
+    left: 84%;
+}
+
+/*Row 7*/
+#Japchae{
+	position: absolute;
+	left: -181%;
+}
+
+#breakfast{
+	position: absolute;
+	left: -49%; 
+}
+
+#Patties{
+	position: absolute;
+    left: 84%;
+}
+
+/*Row 8*/
+#Pancake{
+	position: absolute;
+	left: -181%;
+}
+
+#lazy{
+	position: absolute;
+	left: -49%; 
+}
+
+#miso{
+	position: absolute;
+    left: 84%;
+}
+
+/*Row 9*/
+#spicy{
+	position: absolute;
+	left: -181%;
+}
+
+#cow{
+	position: absolute;
+	left: -49%; 
+}
+
+#cow02{
+	position: absolute;
+    left: 84%;
+}
+
+/*Row 10*/
+#tofu{
+	position: absolute;
+	left: -181%;
+}
+
+#mushroom{
+	position: absolute;
+	left: -49%; 
+}
+
+#soon{
+	position: absolute;
+    left: 84%;
+}
+
+/*Row 11*/
+#noods{
+	position: absolute;
+	left: -181%;
+}
+
+#squid{
+	position: absolute;
+	left: -49%; 
+}
+
+#twisty{
+	position: absolute;
+    left: 84%;
+}
+
+
+
+@media screen and (max-width: 1200px){
+.column{
+	top: 20%;
+}
+
+.column2{
+	top: 75%;
+}
+
+.column3{
+	top: 130%;
+}
+
+.column4{
+	top: 185%;
+}
+
+.column5{
+	top: 262%;
+}
+
+.column6{
+	top: 317%;
+}
+
+.column7{
+	top: 372%;
+}
+
+.column8{
+	top: 427%;
+}
+
+.column9{
+	top: 482%;
+}
+
+.column10{
+	top: 537%;
+}
+
+.column11{
+	top: 592%;
+}
+}
+
+
+@media screen and (max-width: 550px){
+.column{
+	top: 20%;
+}
+
+.column2{
+	top: 45%;
+}
+
+.column3{
+	top: 70%;
+}
+
+.column4{
+	top: 95%;
+}
+
+.column5{
+	top: 130%;
+}
+
+.column6{
+	top: 155%;
+}
+
+.column7{
+	top: 180%;
+}
+
+.column8{
+	top: 205%;
+}
+
+.column9{
+	top: 230%;
+}
+
+.column10{
+	top: 255%;
+}
+
+.column11{
+	top: 280%;
+}
+
+}
+

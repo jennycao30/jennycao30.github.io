@@ -23,6 +23,7 @@ body {
   background-blend-mode: multiply;  
   display: grid;
   place-items: center;
+  overflow:hidden;
 }
 
 .logo{

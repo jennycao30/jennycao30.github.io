@@ -1,0 +1,446 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+	<link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+	<style>
+		body {margin: 0; padding: 0; }
+		#map {postion: absolute; top: 0; bottom: 0; width: 100%; }
+
+		.marker {
+		  background-image: url('https://www.pinclipart.com/picdir/middle/359-3598915_map-marker-icon-location-icon-png-clipart.png');
+		  background-size: cover;
+		  width: 30px;
+		  height: 30px;
+		  border-radius: 50%;
+		  cursor: pointer;
+		}
+
+		.mapboxgl-popup {
+		  max-width: 125px;
+		}
+
+		.mapboxgl-popup-content {
+		  text-align: center;
+		  font-family: 'Open Sans', sans-serif;
+		}
+	</style>
+</head>
+
+<body>
+	<style>
+		.mapboxgl-popup{
+			max-width: 400px;
+			font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+		}
+
+		    .marker {
+			  background-image: url('https://www.pinclipart.com/picdir/middle/359-3598915_map-marker-icon-location-icon-png-clipart.png');
+			  background-size: cover;
+			  width: 25px;
+			  height: 25px;
+			  border-radius: 28%;
+			  cursor: pointer;
+			}
+	</style>
+	<center><div id='map' style='width: 750px; height: 750px;'></div></center>
+		<script>
+			mapboxgl.accessToken = 'pk.eyJ1IjoiamVubnljYW8zMCIsImEiOiJja2VvbzJpY3QwcnYyMnV0NWk0cmtnemplIn0.MAdflkwXRasuzOgnjh9aUw';
+					var map = new mapboxgl.Map({
+					container: 'map', // container id
+					style: 'mapbox://styles/jennycao30/ckervr56d2ukd19mt5cydz24e/draft', // style URL
+					center: [-74.0060, 40.7128], // starting position [lng, lat]
+					zoom: 11 // starting zoom
+					});
+
+
+			map.on('load', function() {
+			        map.loadImage(
+			            'https://docs.mapbox.com/mapbox-gl-js/assets/custom_marker.png',
+			            // Add an image to use as a custom marker
+			            function(error, image) {
+			                if (error) throw error;
+			                map.addImage('custom-marker', image);
+
+	                map.addSource('places', {
+	                    'type': 'geojson',
+	                    'data': {
+	                        'type': 'FeatureCollection',
+	                        'features': [
+	                          	{
+	                                'type': 'Feature',
+	                                'properties': {
+	                                    'description':
+	                                        '<strong>Manhattan</strong'
+	                                },
+	                                'geometry': {
+	                                    'type': 'Point',
+	                                    'coordinates': [-73.9712, 40.7831]
+	                                }
+	                            },
+
+	                            {
+	                                'type': 'Feature',
+	                                'properties': {
+	                                    'description':
+	                                        '<strong>Brooklyn</strong'
+	                                },
+	                                'geometry': {
+	                                    'type': 'Point',
+	                                    'coordinates': [-73.9442, 40.7128]
+	                                }
+	                            },
+
+	                            {
+	                                'type': 'Feature',
+	                                'properties': {
+	                                    'description':
+	                                        '<strong>Bronx</strong>'
+	                                },
+	                                'geometry': {
+	                                    'type': 'Point',
+	                                    'coordinates': [-73.8648, 40.8448]
+	                                }
+	                            },
+
+	                            {
+	                                'type': 'Feature',
+	                                'properties': {
+	                                    'description':
+	                                        '<strong>Queens</strong>'
+	                                },
+	                                'geometry': {
+	                                    'type': 'Point',
+	                                    'coordinates': [-73.7947, 40.7282]
+	                                }
+	                            },
+
+	                            {
+	                                'type': 'Feature',
+	                                'properties': {
+	                                    'description':
+	                                        "<strong>Staten Island</strong>"
+	                                },
+	                                'geometry': {
+	                                    'type': 'Point',
+	                                    'coordinates': [-74.1502, 40.5795]
+	                                }
+	                            },
+
+	                            {
+	                                'type': 'Feature',
+	                                'properties': {
+	                                    'description':
+	                                        '<strong>Long Island</strong>'
+	                                },
+	                                'geometry': {
+	                                    'type': 'Point',
+	                                    'coordinates': [-73.1350, 40.7891]
+	                                }
+	                            },
+	                            
+	                        ]
+	                    }
+	                });
+
+                // Add a layer showing the places.
+                map.addLayer({
+                    'id': 'places',
+                    'type': 'symbol',
+                    'source': 'places',
+                    'layout': {
+                        'icon-image': 'custom-marker',
+                        'icon-allow-overlap': true
+                    }
+                });
+            }
+        );
+
+			        // Create a popup, but don't add it to the map yet.
+			        var popup = new mapboxgl.Popup({
+			            closeButton: false,
+			            closeOnClick: false
+			        });
+
+			        map.on('mouseenter', 'places', function(e) {
+			            // Change the cursor style as a UI indicator.
+			            map.getCanvas().style.cursor = 'pointer';
+
+			            var coordinates = e.features[0].geometry.coordinates.slice();
+			            var description = e.features[0].properties.description;
+
+			            // Ensure that if the map is zoomed out such that multiple
+			            // copies of the feature are visible, the popup appears
+			            // over the copy being pointed to.
+			            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+			                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+			            }
+
+			            // Populate the popup and set its coordinates
+			            // based on the feature found.
+			            popup
+			                .setLngLat(coordinates)
+			                .setHTML(description)
+			                .addTo(map);
+			        });
+
+			        map.on('mouseleave', 'places', function() {
+			            map.getCanvas().style.cursor = '';
+			            popup.remove();
+			        });
+			    });
+
+
+					var geojson = {
+					  type: 'FeatureCollection',
+					  features: [{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-74.0060, 40.7128]
+					    },
+					    properties: {
+					      title: 'Times Square',
+					      description: 'Tourist destination & entertainment center'
+					    }
+					    },
+
+					    {
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-74.0445, 40.6892]
+					    },
+					    properties: {
+					      title: 'Statue of Liberty',
+					      description: 'A colossal neoclassical sculpture on Liberty Island'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-73.9881, 40.7501]
+					    },
+					    properties: {
+					      title: '34 Street Herald-Square',
+					      description: 'One of many shopping districts'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-73.9787, 40.7587]
+					    },
+					    properties: {
+					      title: 'Rockefeller Center',
+					      description: 'A large complex and the ultimate NYC destination where people can enjoy shopping, dining, sight-seeing, and unique events'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-73.9665, 40.7812]
+					    },
+					    properties: {
+					      title: 'Central Park',
+					      description: 'An urban park that is also ranked as #5 largest park'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-73.9690, 40.6602]
+					    },
+					    properties: {
+					      title: 'Prospect Park',
+					      description: 'An urban park in Brooklyn, NYC. A place great for walks, runs, food and drinks, and family outings'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-73.9869, 40.7477]
+					    },
+					    properties: {
+					      title: 'Koreatown',
+					      description: 'A small area by 34 Street Herald Square, that is packed with Korean BBQ restaurants, dessert cafes, bubble tea, karaoke, bars, beauty shops, korean fried chicken places and many more, for anyone to enjoy'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-73.9970, 40.7158]
+					    },
+					    properties: {
+					      title: 'Chinatown',
+					      description: 'A populated area that holds a variety of asian cuisines, dessert places (ice cream, mochi, donuts, cakes, etc), numerous bubble tea shops, and many more for people to enjoy'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-73.9857, 40.7484]
+					    },
+					    properties: {
+					      title: 'Empire State Buildings',
+					      description: 'The Empire State Building, a 102-story Art deco building where one can visit and enjoy great views and unforgettable exhibits, '
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-73.9969, 40.7061]
+					    },
+					    properties: {
+					      title: 'Brooklyn Bridge',
+					      description: 'A popular bridge where tourists visits and for people in general to walk and do their exercise on, or even for a casual stroll'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-73.9776, 40.7614]
+					    },
+					    properties: {
+					      title: 'Museum of Modern Art',
+					      description: 'A popular museum in manhattan that is important to the development and collecting of modern art'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-73.9740, 40.7813]
+					    },
+					    properties: {
+					      title: 'American Museum of Natural History',
+					      description: 'One of the largest natural history museums in the world'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-73.8166, 40.5860]
+					    },
+					    properties: {
+					      title: 'Rockaway Beach',
+					      description: 'One of the many popular beaches in New York for people to go to in the summer to enjoy playing sports and grabbing food and drinks.'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-73.9262, 40.8296]
+					    },
+					    properties: {
+					      title: 'Yankee Stadium',
+					      description: 'A baseball park located in Concourse, Bronx, that is the home field for the Major League Baseball team: New York Yankees. It is also home to many other leagues and sports'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-73.845821, 40.757088]
+					    },
+					    properties: {
+					      title: 'Citi Field',
+					      description: 'Baseball park located in Queens, Flushing Meadows-Corona Park'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-74.1456, 40.5709]
+					    },
+					    properties: {
+					      title: 'Historic Richmond Town',
+					      description: 'An authentic town and farm museum complex where families hike near by and bring their kids to enjoy the fesitivities'
+					    }
+					  	},	
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-74.1659, 40.5818]
+					    },
+					    properties: {
+					      title: 'Staten Island Mall',
+					      description: 'An indoor only shopping mall located in Staten Island'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-73.1459, 40.6476]
+					    },
+					    properties: {
+					      title: 'Fire Island',
+					      description: 'A thin island off the shores of Long Island that is known for its protected beaches'
+					    }
+					  	},
+
+					  	{
+					    type: 'Feature',
+					    geometry: {
+					      type: 'Point',
+					      coordinates: [-74.0168, 40.6895]
+					    },
+					    properties: {
+					      title: 'Governors Island',
+					      description: 'A popular island for families and friends to enjoy picnics and get togethers'
+					    }
+					  	},
+
+					  	]
+					};
+
+					// add markers to map
+					geojson.features.forEach(function(marker) {
+
+					  // create a HTML element for each feature
+					  var el = document.createElement('div');
+					  el.className = 'marker';
+
+					  // make a marker for each feature and add to the map
+					  new mapboxgl.Marker(el)
+					    .setLngLat(marker.geometry.coordinates)
+					    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+    						.setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker.properties.description + '</p>'))
+					    .addTo(map);
+					});
+	</script>
+
+</body>
+</html>

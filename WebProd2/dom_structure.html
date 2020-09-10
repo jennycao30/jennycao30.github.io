@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple DOM example</title>
+  </head>
+  <body>
+      <br>
+      <center>
+      <section>
+        <img src="dinosaur.png" alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth.">
+        <p>The Tyrannosaurus Rex got hungry and made its way to the <a href="https://www.mozilla.org/">Mozilla's home</a></p> 
+      </section>
+    </center>
+
+      <script type="text/javascript">
+      var link = document.querySelector('a');
+      link.textContent = 'Mozilla headquarters';
+      link.href = 'https://developer.mozilla.org';
+
+
+
+      var sect = document.querySelector('section'); //assign a variable to <section>
+      var para = document.createElement('x');//create a new <p> element and assign it to a variable
+      para.textContent = 'Feed your bellies. Do not waste food.'; //add text to the new <p>
+      sect.appendChild(para); //place the new paragraph in the <section>
+
+      var x = para.style;
+      x.color = 'red';
+      x.backgroundColor = 'black';
+      x.padding = '10px'
+      x.width = '300px';
+      x.textAlign = 'center';
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>audio_player</title>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+</head>
+<body>
+<div class="backdrop"> 
+  <div class="audio-player">
+
+    <div id="play-btn"></div>
+
+    <div class="audio-wrapper" id="player-container" href="javascript:;">
+      <audio id="player" ontimeupdate="initProgressBar()">
+        <source src="audio/Oslo.mp3" type="audio/mp3">
+                <source src="https://dl-web.dropbox.com/get/Oslo.mp3?_subject_uid=199049471&w=AABuDNt9BDJnaZOelVFws9FXTufkXCvAPS5SYpy_gRZ2GQ&duc_id=dropbox_duc_id" type="audio/mp3">
+                <source src="C:\Users\jenny\OneDrive\Desktop\WebProd2\Audio\audio" type="audio/.wav">
+                <source src="C:\Users\jenny\OneDrive\Desktop\WebProd2\Audio\audio" type="audio/.wav">
+
+      </audio>
+    </div>
+
+
+    <div class="player-controls scrubber">
+      
+      <div id="Title">
+      <p id="title">Oslo <small>by</small> Holy Esque</p>
+      </div>
+
+      <span id="seekObjContainer">
+        <progress id="seekObj" value="0" max="1"></progress>
+      </span>
+
+      <br>
+
+      <small style="float: left; position: relative; left: 15px;" class="start-time"></small>
+      <small style="float: right; position: relative; right: 20px;" class="end-time"></small>
+
+      <!--<img src="media/previous.png" onclick="previousSong()" id="previous-song" />
+      <img src="media/forward.png" onclick="nextSong()" id="next-song" />-->               <!--Was trying to work on this but never worked it out-->
+    </div>
+
+
+    <div class="album-image" style="background-image: url('https://artwork-cdn.7static.com/static/img/sleeveart/00/051/614/0005161476_350.jpg')"></div>
+    </div>
+     
+
+  <script src="js/script.js"></script>   
+</div>
+</body>
+</html>

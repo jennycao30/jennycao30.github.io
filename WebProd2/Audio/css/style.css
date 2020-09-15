@@ -1,0 +1,101 @@
+html {
+  height: 100%;
+  display: table;
+  margin: auto;
+}
+
+body {
+  background-color: black;
+}
+
+.backdrop{
+  background-image: url('https://astrotourismwa.com.au/wp-content/uploads/2018/12/Milky-Way-Galaxy.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 900px;
+  height: 600px;
+  position: absolute; 
+  right: 18%;
+  top:10%;
+}
+
+
+.title{
+  font-color: white;
+}
+
+.audio-player {
+  background: black;
+  border: 3px solid rgb(204, 230, 255);
+  height: 300px;
+  width: 50vw;
+  position: absolute; 
+  left: 12%;
+  top: 18%;
+  text-align: center;
+  display: flex;
+  flex-flow: row;
+  margin: 4rem 0 4rem 0;
+}
+
+
+.audio-player .album-image {
+  height: 250px;
+  width: 275px;
+  background-size: cover;
+  z-index: 0;
+  position: relative;
+  top: 8%;
+  right: 1%;
+ 
+}
+.audio-player .player-controls {
+  align-items: center;
+  justify-content: center;
+  margin-top: 2.5rem;
+  flex: 3;
+}
+.audio-player .player-controls progress {
+  width: 90%;
+}
+.audio-player .player-controls progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: rgb(204, 230, 255);
+  color: blue;
+  height: 5px;
+}
+.audio-player .player-controls progress[value]::-webkit-progress-bar {
+  background-color: rgb(204, 230, 255);
+  border-radius: 2px;
+  border: 1px solid #dfdfdf;
+  color: blue;
+}
+.audio-player .player-controls progress::-webkit-progress-value {
+  background-color: blue;
+}
+.audio-player .player-controls p {
+  font-size: 1.6rem;
+}
+.audio-player #play-btn {
+  background-image: url("../media/play.png");
+  background-size: cover;
+  width: 75px;
+  height: 75px;
+  margin: 2rem 0 2rem 2rem;
+}
+.audio-player #play-btn.pause {
+  background-image: url("../media/pause.png");
+}
+
+/* style for next and previous song images */
+#next-song, #previous-song {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    bottom: 13.5%;
+    font-size: 40px;
+    z-index: 4;
+}
+

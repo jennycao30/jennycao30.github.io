@@ -1,0 +1,128 @@
+body {
+	background-color: rgb(255, 255, 204);
+}
+
+
+.container {
+	display: flex;
+	background: black;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.video{
+	width: 100%;
+}
+
+.c-video{
+	width: 100%;
+	max-width: 480px;
+	position: relative;
+	overflow: hidden;
+}
+
+.c-video:hover .controls {
+	transform: translateY(0);
+	opacity: .7;
+}
+
+.controls {
+	display: flex;
+	position: absolute;
+	bottom: 4px;
+	width: 100%;
+	height: 60px;
+	flex-wrap: wrap;
+	background: rgba(0, 0, 0, 0.7);
+	transform: translateY(100%) translateY(-1px);
+	transition: all 0.3s;
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.13, rgb(255, 230, 230)),
+		color-stop(1, rgb(204, 204, 255))
+	);
+
+}
+
+}
+
+
+
+.buttons {
+	padding: 10px;
+}
+
+.buttons button {
+	background: none; 
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+}
+
+.buttonsF button {
+	background: none; 
+	border: 0;
+	position: absolute;
+	right: -2px;
+	height: 30px;
+	width: 40px;
+	font-size: 22px;
+	outline: 0;
+	cursor: pointer;
+
+}
+
+.btnv {
+	background: none; 
+	border: 1;
+	width: 40px;
+	position: absolute;
+	top: 25px;
+	right: 60px;
+	font-size: 22px;
+	outline: 0;
+	cursor: pointer;
+}
+
+.buttons button:before {
+	content: '\f144';
+	font-family: 'Font Awesome 5 Free';
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	font-size: 28px;
+	color: rgb(0, 0, 51);
+	-webkit-font-smoothing: antialiased;
+}
+
+.buttons button.play:before{
+	content: '\f144';
+}
+
+.buttons button.pause:before{
+	content: '\f28b';
+}
+
+.buttons button.full-screen:before{
+	content: '\f31e';
+}
+.blue-bar {
+	height: 10px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: black;
+}
+
+.blue-juice {
+	height: 10px;
+	width: 0px;
+	background-color: blue;
+}
+
+#volume-bar {
+	width: 60px;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title> Variables Review 2</title>
+</head>
+<body>
+
+<p id="myP">JavaScript!</p>
+
+<button type="button" id="increment">Increment</button>
+<button type="button" id="decrease">Decrease</button>
+<button type="button" id="blue">Blue</button>
+<button type="button" id="red">Red</button>
+<button type="button" id="green">Green</button>
+
+<script>
+
+var a;
+a = 75;
+
+var r;
+r = 0;
+
+var b;
+g = 0;
+
+var bl;
+b = 0;
+
+var increment = document.getElementById("increment");
+var decrease = document.getElementById("decrease");
+var blue = document.getElementById("blue");
+var red = document.getElementById("red");
+var green = document.getElementById("green");
+
+/*increase font-size*/
+document.getElementById("myP").style.fontSize = a+"px";
+
+increment.addEventListener("click", function(){
+
+  a = a+1;
+  document.getElementById("myP").style.fontSize = a+"px";
+  console.log(a);
+
+	
+});
+
+/*decrease font-size*/
+document.getElementById("myP").style.fontSize = a+"px";
+
+decrease.addEventListener("click", function(){
+
+  a = a-1;
+  document.getElementById("myP").style.fontSize = a+"px";
+  console.log(a);
+	
+});
+
+
+blue.addEventListener("click", function(){
+
+  b = b+10;
+  document.getElementById("myP").style.color = "rgb"+"(0,0,"+b+")";
+
+});
+
+
+red.addEventListener("click", function(){
+
+  r = r+10;
+  document.getElementById("myP").style.color = "rgb"+"("+r+",0,0)";
+
+});
+
+green.addEventListener("click", function(){
+
+  g = g+10;
+  document.getElementById("myP").style.color = "rgb"+"("+"0,"+g+",0)";
+});
+
+
+
+
+</script>
+
+</body>
+</html>

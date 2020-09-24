@@ -1,0 +1,129 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+	<meta charset="utf-8">
+	<title>Hello world</title>
+	<style type="text/css">
+		body {
+		  margin: 40px;
+		}
+
+		.wrapper {
+		  display: grid;
+		  grid-template-columns: 100px 100px 100px;
+		  grid-gap: 10px;
+		  background-color: #fff;
+		  color: #444;
+		}
+
+		.box1{
+		  background-color: #444;
+		  color: pink;
+		  border-radius: 5px;
+		  padding: 20px;
+		  font-size: 16px;
+		}
+		.box2 {
+		  background-color: yellow;
+		  color: green;
+		  border-radius: 5px;
+		  padding: 20px;
+		  font-size: 16px;
+		  text-align: center;
+		}
+		.box3 {
+		  background-color: red;
+		  color: white;
+		  border-radius: 5px;
+		  padding: 20px;
+		  font-size: 16px;
+		  text-align: center;
+		}
+
+		.box4 {
+		  background-color: black;
+		  color: blue;
+		  border-radius: 5px;
+		  padding: 20px;
+		  font-size: 16px;
+		  text-align: center;
+		}
+
+		.box5 {
+		  background-color: blue;
+		  color: orange;
+		  border-radius: 5px;
+		  padding: 20px;
+		  font-size: 16px;
+		  text-align: center;
+		}
+
+		.box6 {
+		  background-color: orange;
+		  color: black;
+		  border-radius: 5px;
+		  padding: 20px;
+		  font-size: 16px;
+		  text-align: center;
+		}
+
+		.box7 {
+		  background-color: green;
+		  color: yellow;
+		  border-radius: 5px;
+		  padding: 20px;
+		  font-size: 16px;
+		  text-align: center;
+		}
+
+		.box8 {
+		  background-color: pink;
+		  color: red;
+		  border-radius: 5px;
+		  padding: 20px;
+		  font-size: 16px;
+		  text-align: center;
+		}
+	</style>
+</head> 
+<body>
+
+<div class="wrapper">
+	<div class="box1" id ="answer"></div>
+	<div class="box2" id ="answer2"></div>
+	<div class="box3" id ="answer3"></div>
+	<div class="box4" id ="answer4"></div>
+	<div class="box5" id ="answer5"></div>
+	<div class="box6" id ="answer6"></div>
+	<div class="box7" id ="answer7"></div>
+	<div class="box8" id ="answer8"></div>
+</div>
+
+	<script type="text/javascript">
+		console.log("Winter is Coming");
+		console.log(2020);
+		console.log("Woohoo! I love to code! #javascript");
+		console.log(2.4);
+		console.log("I will be " + (21 + 3.5) +" years old when we start sending people to Mars.");
+		console.log(2020 - 1969);
+		console.log(65 / 240);
+		console.log(0.2708 * 100);
+		console.log('JavaScript'.toUpperCase());
+		console.log(' Remove whitespace'.trim());
+		console.log(Math.floor(Math.random() * 100));
+		console.log(Math.ceil(43.56041834903037));
+		console.log(Number.isInteger(44)); //Prints true
+
+		document.getElementById("answer").innerHTML = "Winter Is Coming";
+		document.getElementById("answer2").innerHTML = "2020";
+		document.getElementById("answer3").innerHTML = "Woohoo! I love to code! #javascript";	
+		document.getElementById("answer4").innerHTML = "2.4";
+		document.getElementById("answer5").innerHTML = "I will be 24.5 years old when we start sending people to Mars.";
+		document.getElementById("answer6").innerHTML = "84";
+		document.getElementById("answer7").innerHTML = "44";
+		document.getElementById("answer8").innerHTML = "True";
+
+	</script>
+
+</body>
+</html>

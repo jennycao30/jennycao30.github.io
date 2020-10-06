@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+ <html>
+ <head>
+    <title>Food For Time of Day</title>
+    <style>
+
+      label,
+
+      label {
+        font-size: 1rem;
+        padding-right: 10px;
+        font-family: sans-serif;
+      }
+
+      select {
+        font-size: .9rem;
+        padding: 2px 5px;
+        font-family: sans-serif;
+      }
+
+
+    </style>
+  </head>
+ <body>
+  <label for="TimeOfDay">Select Time of Day: </label>
+  <select name="time" id="TimeOfDay">
+    <option value="">--Please select a time of day--</option>
+    <option value="yellow">Morning</option>
+    <option value="orange">Afternoon</option>
+    <option value="midnightblue">Night</option>
+  </select>
+
+  <h1>Colors Related to Time of Day</h1>
+
+  <script>
+    const select = document.querySelector('select');
+    const html = document.querySelector('.output');
+
+    select.onchange = function() {
+     const choice = select.value;
+
+     switch(choice) {
+       case 'yellow':
+       update('rgb(255, 255, 204)','rgb(204, 0, 0)');
+       break;
+       case 'orange':
+       update('rgb(255, 153, 51)','black');
+       break;
+       case 'midnightblue':
+       update('rgb(0, 0, 51)','white');
+       break;
+     }
+   }
+
+
+
+   function update(bgColor, textColor) {
+     document.body.style.background = bgColor;
+     document.body.style.text = textColor;
+   }
+ </script>
+
+
+
+</body>
+</html>

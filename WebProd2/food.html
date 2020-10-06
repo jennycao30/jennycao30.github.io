@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Food For Time of Day</title>
+    <style>
+    	body{
+    		background-image: url(https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2017/01/whole30-recipes.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 900px;
+			height: 600px;
+			position: absolute; 
+			right: 30%;
+			top:45%;
+			font-family: sans-serif;
+    	}
+
+        label,
+
+            label {
+                font-size: 1rem;
+                padding-right: 10px;
+                font-family: sans-serif;
+                font-color: white;
+            }
+
+            select {
+                font-size: .9rem;
+                padding: 2px 5px;
+                font-family: sans-serif;
+            }
+
+
+    </style>
+</head>
+<body>
+<div id="food"></div>
+<label for="weather">Meal Choice: </label>
+<select id="weather">
+  <option value="">-- Make a choice --</option>
+  <option value="breakfast">Breakfast</option>
+  <option value="lunch">Lunch</option>
+  <option value="dinner">Dinner</option>
+</select>
+
+<h1>Food Idea</h1>
+<p></p>
+
+
+<script>
+const select = document.querySelector('select');
+const para = document.querySelector('p');
+
+select.addEventListener('change', setWeather);
+
+
+function setWeather() {
+  const choice = select.value;
+
+  switch (choice) {
+    case 'breakfast':
+      para.textContent = 'Sunny Side Eggs & Bacon';
+      break;
+    case 'lunch':
+      para.textContent = 'Pork Ramen';
+      break;
+    case 'dinner':
+      para.textContent = 'Seafood Hotpot';
+      break;
+    default:
+      para.textContent = '';
+  }
+}	
+</script>
+
+
+
+
+</body>
+</html>

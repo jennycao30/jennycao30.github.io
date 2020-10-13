@@ -1,0 +1,23 @@
+body{
+	background-color: rgb(204, 229, 255);
+}
+
+#items{
+	position: absolute;
+	align-items: center;
+	left: 5%;
+}
+
+#buttons{
+	align-items: center;
+	position: absolute;
+	left: 45%;
+	top: -40%;
+	z-index: 10;
+}
+
+#button{
+	background-color: white;
+	border: 3px;
+	border-color: blue;
+}

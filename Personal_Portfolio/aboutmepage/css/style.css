@@ -171,8 +171,22 @@ nav a:hover {
   width: 80%;
   left: 9%;
   top: 55%;
+  display: none;
 }
 
+#hide{
+  position: absolute;
+  padding: 0.25rem 0.5rem;
+  border: 3px solid #fefefe;
+  color: #fefefe;
+  background: rgba(0,0,0,0.6);
+  font-size: 12px;
+  text-transform: capitalize;
+  cursor: pointer;
+  outline: none;
+  top: 58%;
+  left: 11%;
+}
 
 
 /* unvisited link */

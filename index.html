@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html lang=en dir="ltr">
 
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Jenny's website</title>
-		<link rel="stylesheet" type="text/css" href="Personal_Portfolio/css/style02.css"/> 
-		<link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&family=Work+Sans:wght@300;600&display=swap" rel="stylesheet">
-		<link rel="shortcut icon" href="favicon/favicon.png" />
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jenny's website</title>
+    <link rel="stylesheet" type="text/css" href="Personal_Portfolio/css/style02.css"/> 
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&family=Work+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon/favicon.png" />
     <script src="https://kit.fontawesome.com/8a1dce2613.js" crossorigin="anonymous"></script>
 
 
-	</head>
-	
-	<body>
-		<header>
-			<h1 class="logo">Jenny Cao</h1>
-			 <input type="checkbox" id="nav-toggle" class="nav-toggle">
-			<nav>
-				<ul class="right">
-					<li><a href="#home">Home</a></li>
-					<li><a href="Personal_Portfolio/aboutmepage/about.html">About</a></li>
-					<li><a href="Personal_Portfolio/Photography/index.html">Photography</a></li>
-					<li><a href="Personal_Portfolio/Contact/contact.html">Contact</a></li>
-					<li><a href="https://www.facebook.com/jenny.cao.33"><i class="fab fa-facebook-square"></i></a></li>
-					<li><a href="https://www.instagram.com/moo_jenn/"><i class="fab fa-instagram"></i></a></li>
-				</ul>
-			</nav>
+  </head>
+  
+  <body>
+    <div class="loader_bg">
+<div class="loadingio-spinner-bean-eater-ndpsgpe8b38"><div class="ldio-9z8t7okqom">
+<div><div></div><div></div><div></div></div><div><div></div><div></div><div></div></div>
+</div></div>
+    </div>
 
-			<label for="nav-toggle" class="nav-toggle-label">
-				<span></span>
-			</label>
-		</header>
+    <header>
+      <h1 class="logo">Jenny Cao</h1>
+       <input type="checkbox" id="nav-toggle" class="nav-toggle">
+      <nav>
+        <ul class="right">
+          <li><a href="#home">Home</a></li>
+          <li><a href="Personal_Portfolio/aboutmepage/about.html">About</a></li>
+          <li><a href="Personal_Portfolio/Photography/index.html">Photography</a></li>
+          <li><a href="Personal_Portfolio/Contact/contact.html">Contact</a></li>
+          <li><a href="https://www.facebook.com/jenny.cao.33"><i class="fab fa-facebook-square"></i></a></li>
+          <li><a href="https://www.instagram.com/moo_jenn/"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </nav>
 
-		<br>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+
+    <br>
 
 <div class="slides">
 <div class="slideshow-container">
@@ -131,5 +137,12 @@ function showSlides(n) {
 }
 </script>
 
-	</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    setTimeout(function(){
+      $('.loader_bg').fadeToggle();
+    }, 1500);
+  </script>
+
+  </body>
 </html>
